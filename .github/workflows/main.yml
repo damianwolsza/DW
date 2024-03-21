@@ -1,8 +1,8 @@
 name: Watch
 on:
   schedule:
-    #- cron: '0 */2 * * *'  # Trigger every 2 hours
-    - cron: '*/5 * * * *' # Trigger every 2 hours
+    - cron: '0 */2 * * *'  # Trigger every 2 hours
+    #- cron: '*/5 * * * *' # Trigger every 2 hours
   workflow_dispatch:
     inputs:
       url:
