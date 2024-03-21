@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34310.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTube.Watcher", "YouTube.Watcher\YouTube.Watcher.csproj", "{71955D8F-3562-4529-8B01-FFB7E17CADD0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71955D8F-3562-4529-8B01-FFB7E17CADD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71955D8F-3562-4529-8B01-FFB7E17CADD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71955D8F-3562-4529-8B01-FFB7E17CADD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71955D8F-3562-4529-8B01-FFB7E17CADD0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E0CC2BD-674D-4EF5-957E-9148179D002B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+name: Watch
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL'
+        required: false
+        default: 'https://youtu.be/E6sUJWwZLwE'
+      timeoutMin:
+        description: 'Timeout (in minutes)'
+        required: false
+        default: 60
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+    - run: dotnet build
+    - name: Ensure browsers are installed
+      run: pwsh YouTube.Watcher/bin/Debug/net8.0/playwright.ps1 install --with-deps
+    - name: Run console playwright
+      run: dotnet run --project YouTube.Watcher/YouTube.Watcher.csproj war --url ${{ github.event.inputs.url }} --timeoutMin ${{ github.event.inputs.timeoutMin }}
+    - name: Upload screenshots as artifacts
+      if: always() # Run this step even if previous steps fail
+      uses: actions/upload-artifact@v2
+      with:
+        name: screenshots
+        path: screenshots/

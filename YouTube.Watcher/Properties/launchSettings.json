@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "YouTube.Watcher": {
+      "commandName": "Project",
+      "commandLineArgs": "-u https://youtu.be/E6sUJWwZLwE"
+    }
+  }
+}
