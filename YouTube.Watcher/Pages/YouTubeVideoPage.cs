@@ -23,7 +23,7 @@ internal class YouTubeVideoPage : BasePage
             await CookieAcceptButtonLocator.ClickAsync();
     }
 
-    public async Task PlayVideo(int timeoutMin, bool skipAds = true)
+    public async Task PlayVideo(int timeoutMin, bool skipAds = false)
     {
         var lastScreenshotTime = DateTime.Now;
         var startTime = DateTime.Now;
