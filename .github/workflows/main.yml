@@ -8,7 +8,7 @@ on:
       url:
         description: 'URL'
         required: false
-        default: 'https://youtu.be/E6sUJWwZLwE'
+        default: 'https://youtu.be/tXUtSGvHMeg'
       timeoutMin:
         description: 'Timeout (in minutes)'
         required: false
