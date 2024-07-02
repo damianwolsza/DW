@@ -27,7 +27,7 @@ jobs:
     - name: Ensure browsers are installed
       run: pwsh YouTube.Watcher/bin/Debug/net8.0/playwright.ps1 install --with-deps
     - name: Run console playwright
-      run: dotnet run --project YouTube.Watcher/YouTube.Watcher.csproj --url ${{ github.event.inputs.url || 'https://youtu.be/E6sUJWwZLwE' }} --timeoutMin ${{ github.event.inputs.timeoutMin || 110 }}
+      run: dotnet run --project YouTube.Watcher/YouTube.Watcher.csproj --url ${{ github.event.inputs.url || 'https://youtu.be/tXUtSGvHMeg' }} --timeoutMin ${{ github.event.inputs.timeoutMin || 110 }}
     - name: Upload screenshots as artifacts
       if: always() # Run this step even if previous steps fail
       uses: actions/upload-artifact@v2
