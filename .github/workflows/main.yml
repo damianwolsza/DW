@@ -1,7 +1,7 @@
 name: Watch
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Trigger every 2 hours
+    - cron: '*/30 */3 * * *'  # Trigger every 2 hours
     #- cron: '*/5 * * * *' # Trigger every 2 hours
   workflow_dispatch:
     inputs:
@@ -30,7 +30,7 @@ jobs:
       run: dotnet run --project YouTube.Watcher/YouTube.Watcher.csproj --url ${{ github.event.inputs.url || 'https://youtu.be/KjArqVymbKM' }} --timeoutMin ${{ github.event.inputs.timeoutMin || 16 }}
     - name: Upload screenshots as artifacts
       if: always() # Run this step even if previous steps fail
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v2
       with:
         name: screenshots
         path: screenshots/
